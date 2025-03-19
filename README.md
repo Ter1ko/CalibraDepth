@@ -26,3 +26,60 @@
 
 ```bash
 pip install opencv-python numpy Pillow
+```
+
+## 使用说明
+
+1.克隆项目仓库：
+
+```bash
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+```
+
+2.放置校准图像：
+
+将你的棋盘格标定图像（支持 JPG、PNG、TIF 等无损格式）放入项目根目录下的 images 文件夹中。仓库内已包含部分示例图片，确保图片中能够清晰显示棋盘格图案。
+
+3.配置重要参数：
+
+打开主程序文件（例如 calibration.py），根据你的实际情况修改以下参数：
+
+-棋盘格参数：
+--chessboard_size：棋盘格内部角点的数量（例如 (9, 6) 表示 9 列 6 行）。
+--square_size_m：棋盘格中每个正方形的实际边长（单位：米）。
+-相机传感器参数：
+--sensor_size_mm：你的相机传感器的物理尺寸（宽×高，单位：毫米）。请根据实际设备修改此参数。
+--focal_length_mm：默认的物理焦距（单位：毫米），当图像 EXIF 中没有焦距信息时使用。
+-图像格式：
+--image_extension：校准图像的文件扩展名（例如 .jpg、.png 或 .tif），确保 images 文件夹内的图片格式一致。
+
+4.运行程序：
+
+使用 Python 运行脚本：
+
+```bash
+python calibration.py
+```
+
+程序会自动读取 images 文件夹中的所有图像，执行棋盘格角点检测、相机标定和距离计算，并在终端输出标定结果和各图像对应的距离信息。
+
+##重要参数说明
+
+-chessboard_size：棋盘格内角点数量（行×列），用于角点检测。
+-square_size_m：棋盘格每个正方形的实际边长（单位：米）。
+-sensor_size_mm：相机传感器尺寸（宽、高，单位：毫米），需根据具体设备进行设置。
+-focal_length_mm：默认焦距（单位：毫米），当 EXIF 中无焦距信息时使用。
+-image_extension：校准图像的文件格式，所有图像需存放于 images 文件夹内。
+
+##注意事项
+-请确保校准图像中棋盘格图案清晰可见，且角点检测效果良好。
+-若 EXIF 数据中包含正确的焦距信息，程序将自动优先使用；否则使用默认值。
+-修改相机传感器参数时，请根据实际设备信息进行更新。
+
+##贡献
+欢迎各位开发者提出改进意见或贡献代码！请先 fork 本仓库，再提交 pull request。
+
+##鸣谢
+-感谢 OpenCV 团队提供了强大的计算机视觉库。
+-感谢所有为本项目贡献代码和建议的开发者。
