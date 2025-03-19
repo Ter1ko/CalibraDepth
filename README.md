@@ -1,5 +1,9 @@
-# 碎碎念
-学校要求的实验内容，并不复杂，但网络并无直接可用的项目，遂使用了deepseek和gpt分别跑了两份代码，同时画了一份简单的棋盘格供大家使用
+# 项目设计原因
+
+本项目源于学校实验的要求，虽然实验内容并不复杂，但网络上缺少现成的、直接可用的项目代码。为此，我分别利用 DeepSeek 和 GPT 对代码进行了优化，以便大家对比和学习。
+
+另外，由于网络上难以获取高清的棋盘格图，而相机标定与单目测距对棋盘格图的清晰度要求较高，我使用 Photoshop 绘制了一份简单且高清的棋盘格图，供大家在实验中使用。
+
 
 # 相机标定与单目测距工具
 
@@ -7,6 +11,7 @@
 
 ## 功能特点
 
+***提供了高清无损的棋盘格图片***
 - **棋盘格角点检测**：自动检测并精细化处理棋盘格内角点。
 - **相机标定**：使用 OpenCV 对相机进行标定，计算相机矩阵和畸变系数。
 - **单目距离测量**：根据标定结果计算相机与棋盘格之间的距离。
@@ -33,13 +38,13 @@ pip install opencv-python numpy Pillow
 1.克隆项目仓库：
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Ter1ko/MonoCalibPro.git
+cd MonoCalibPro
 ```
 
 2.放置校准图像：
 
-将你的棋盘格标定图像（支持 JPG、PNG、TIF 等无损格式）放入项目根目录下的 images 文件夹中。仓库内已包含部分示例图片，确保图片中能够清晰显示棋盘格图案。
+将你的棋盘格标定图像（支持 JPG、PNG、TIF 等无损格式）放入项目根目录下的 images 文件夹中，确保图片中能够清晰显示棋盘格图案。
 
 3.配置重要参数：
 
@@ -59,7 +64,8 @@ cd your-repo-name
 使用 Python 运行脚本：
 
 ```bash
-python calibration.py
+python calibration_gpt.py
+python calibration_dp.py
 ```
 
 程序会自动读取 images 文件夹中的所有图像，执行棋盘格角点检测、相机标定和距离计算，并在终端输出标定结果和各图像对应的距离信息。
