@@ -46,13 +46,13 @@ cd your-repo-name
 打开主程序文件（例如 calibration.py），根据你的实际情况修改以下参数：
 
 - 棋盘格参数：
---  chessboard_size：棋盘格内部角点的数量（例如 (9, 6) 表示 9 列 6 行）。
---  square_size_m：棋盘格中每个正方形的实际边长（单位：米）。
+ - chessboard_size：棋盘格内部角点的数量（例如 (9, 6) 表示 9 列 6 行）。
+ - square_size_m：棋盘格中每个正方形的实际边长（单位：米）。
 - 相机传感器参数：
---  sensor_size_mm：你的相机传感器的物理尺寸（宽×高，单位：毫米）。请根据实际设备修改此参数。
---  focal_length_mm：默认的物理焦距（单位：毫米），当图像 EXIF 中没有焦距信息时使用。
+ - sensor_size_mm：你的相机传感器的物理尺寸（宽×高，单位：毫米）。请根据实际设备修改此参数。
+ - focal_length_mm：默认的物理焦距（单位：毫米），当图像 EXIF 中没有焦距信息时使用。
 - 图像格式：
---  image_extension：校准图像的文件扩展名（例如 .jpg、.png 或 .tif），确保 images 文件夹内的图片格式一致。
+ -image_extension：校准图像的文件扩展名（例如 .jpg、.png 或 .tif），确保 images 文件夹内的图片格式一致。
 
 4.运行程序：
 
