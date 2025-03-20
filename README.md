@@ -38,7 +38,7 @@ pip install opencv-python numpy Pillow
 1.克隆项目仓库：
 
 ```bash
-git clone https://github.com/Ter1ko/MonoCalibPro.git
+git clone https://github.com/Ter1ko/CalibraDepth.git
 cd MonoCalibPro
 ```
 
@@ -48,7 +48,7 @@ cd MonoCalibPro
 
 3.配置重要参数：
 
-打开主程序文件（例如 calibration.py），根据你的实际情况修改以下参数：
+打开主程序文件（例如 calibration_gpt.py），根据你的实际情况修改以下参数：
 
 * 棋盘格参数：
   * chessboard_size：棋盘格内部角点的数量（例如 (9, 6) 表示 9 列 6 行）。
