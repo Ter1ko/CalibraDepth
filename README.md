@@ -54,7 +54,7 @@ cd MonoCalibPro
  - **相机传感器尺寸（sensor_size_mm）**：查找你的相机或手机的传感器宽度和高度（单位：毫米）。
  - **拍摄镜头焦距（focal_length_mm）**：查找你的镜头的物理焦距（单位：毫米）。
    
-将以上参数填入程序中预设的位置（位于 calibration_gpt.py 或 calibration_dp.py 文件顶部的用户可调参数部分）。
+将以上参数填入程序中预设的位置（位于 calibration_dp.py 或 calibration_gpt.py 文件顶部的用户可调参数部分）。
 
  ## 2.准备棋盘格标定板
  
@@ -94,15 +94,17 @@ cd MonoCalibPro
 2.使用 Python 运行脚本：
 
 ```bash
-python calibration_gpt.py
 python calibration_dp.py
+```
+```bash
+python calibration_gpt.py
 ```
 
 3.程序将自动读取images 文件夹中的所有图像并校准图片，进行角点检测、相机标定和距离计算，并在终端输出标定结果、重投影误差及相机到棋盘格的距离信息。
 
 
 
-## 注意事项
+## 5.注意事项
 
 **参数调整**：
 
